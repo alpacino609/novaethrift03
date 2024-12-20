@@ -11,6 +11,21 @@
   <script>
     window.addEventListener("message", onReceivedPostMessage, false);
 
+    function onReceivedPostMessage(event) {
+      //..ex deconstruct event into action & params
+      var action = event.data.action;
+      var params = event.data.params;
+      console.log("onReceivedPostMessage " + event);
+    }
+
+    function onReceivedActivityMessageViaJavascriptInterface(json) {
+      //..ex deconstruct data into action & params
+      var data = JSON.parse(json);
+      var action = data.action;
+      var params = data.params;
+      console.log("onReceivedActivityMessageViaJavascriptInterface " + event);
+    }
+
     function postMessageToiOS(postData) {
         window.webkit.messageHandlers.callBackHandler.postMessage(postData);
     }
