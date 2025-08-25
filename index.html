@@ -10,12 +10,13 @@
   <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
   <script>
     window.addEventListener("message", onReceivedPostMessage, false);
-
+    Android.showToast("@@@alpacino");
     function onReceivedPostMessage(event) {
       //..ex deconstruct event into action & params
       var action = event.data.action;
       var params = event.data.params;
       console.log("onReceivedPostMessage " + event);
+      Android.showToast("@@@alpacino");
     }
 
     function onReceivedActivityMessageViaJavascriptInterface(json) {
@@ -24,11 +25,12 @@
       var action = data.action;
       var params = data.params;
       console.log("onReceivedActivityMessageViaJavascriptInterface " + event);
+      Android.showToast("@@@alpacino");
     }
 
     function postMessageToiOS(postData) {
         window.webkit.messageHandlers.callBackHandler.postMessage(postData);
-        Android.showToast("@@@test");
+        Android.showToast("@@@alpacino");
     }
 
     var element_layer = document.getElementById('layer');
