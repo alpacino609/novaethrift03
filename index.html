@@ -27,9 +27,9 @@
     }
 
     function postMessageToiOS(postData) {
-        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
         window.Android.showToast("@@@alpacino");
         Android.showToast("@@@alpacino");
+        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
     }
 
     var element_layer = document.getElementById('layer');
