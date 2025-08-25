@@ -16,7 +16,6 @@
       var action = event.data.action;
       var params = event.data.params;
       console.log("onReceivedPostMessage " + event);
-      Android.showToast("@@@alpacino");
     }
 
     function onReceivedActivityMessageViaJavascriptInterface(json) {
@@ -25,12 +24,10 @@
       var action = data.action;
       var params = data.params;
       console.log("onReceivedActivityMessageViaJavascriptInterface " + event);
-      Android.showToast("@@@alpacino");
     }
 
     function postMessageToiOS(postData) {
         window.webkit.messageHandlers.callBackHandler.postMessage(postData);
-        Android.showToast("@@@alpacino");
     }
 
     var element_layer = document.getElementById('layer');
@@ -51,7 +48,7 @@
               zonecode : data.zonecode
           };
           window.postMessageToiOS(postData);
-          Android.showToast("hihihihi");
+          Android.showToast("@@@alpacino");
           
         },
         width : '100%',
