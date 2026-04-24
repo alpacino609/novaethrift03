@@ -11,9 +11,9 @@
   <script>
     new kakao.Postcode({
         oncomplete: function(data) {
-           window.webkit.messageHandlers.callBackHandler.postMessage(data);
-            Android.postMessageToAndroid(JSON.stringify(data).toString());
-            window.Android.postMessageToAndroid(JSON.stringify(data).toString());
+          window.webkit.messageHandlers.callBackHandler.postMessage(data);
+          Android.postMessageToAndroid(JSON.stringify(data).toString());
+          window.Android.postMessageToAndroid(JSON.stringify(data).toString());
         }
     }).open();
     
